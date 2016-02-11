@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deep Blue Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DeepBlueController" customModule="DeepBlueApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzd-o2-Mil">
+                                <rect key="frame" x="20" y="497" width="280" height="51"/>
+                                <color key="backgroundColor" red="0.0" green="0.20522422691959519" blue="0.42927921963276838" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="osW-wj-U2k"/>
+                                </constraints>
+                                <state key="normal" title="What Movie Should I See?"/>
+                                <connections>
+                                    <action selector="refreshButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5eO-JX-AhG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poe-Dw-PQ0">
+                                <rect key="frame" x="20" y="70" width="280" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9Ae-u8-qlt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y61-U4-N6y">
+                                <rect key="frame" x="16" y="124" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CLE-d7-aoV">
+                                <rect key="frame" x="142" y="265.5" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.2052242269" blue="0.42927921959999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CLE-d7-aoV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0L2-Ws-Jgw"/>
+                            <constraint firstItem="Zzd-o2-Mil" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y61-U4-N6y" secondAttribute="bottom" constant="30" id="2Np-Qi-aMV"/>
+                            <constraint firstItem="y61-U4-N6y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9GM-rP-ll7"/>
+                            <constraint firstItem="Zzd-o2-Mil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="GCr-9P-LqZ"/>
+                            <constraint firstItem="poe-Dw-PQ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="GPO-Wq-sdJ"/>
+                            <constraint firstAttribute="trailing" secondItem="poe-Dw-PQ0" secondAttribute="trailing" constant="20" id="H1A-NU-4nH"/>
+                            <constraint firstAttribute="trailing" secondItem="Zzd-o2-Mil" secondAttribute="trailing" constant="20" id="aWr-le-HYL"/>
+                            <constraint firstItem="poe-Dw-PQ0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="b9g-HZ-1rW"/>
+                            <constraint firstItem="CLE-d7-aoV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="itl-Zg-5pu"/>
+                            <constraint firstItem="y61-U4-N6y" firstAttribute="top" secondItem="poe-Dw-PQ0" secondAttribute="bottom" constant="10" id="j7S-eo-1kP"/>
+                            <constraint firstItem="y61-U4-N6y" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mG5-13-GfM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zzd-o2-Mil" secondAttribute="bottom" constant="20" id="oIY-mm-mgV"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="CLE-d7-aoV" id="Su9-EL-b1r"/>
+                        <outlet property="overviewLabel" destination="y61-U4-N6y" id="dxg-SK-SCH"/>
+                        <outlet property="titleLabel" destination="poe-Dw-PQ0" id="PMu-vO-Iwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="387"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EE482A71DF2ECB08AA61B32 /* Pods_DeepBlueApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0AB63BE29D25C820DB64D6 /* Pods_DeepBlueApp.framework */; };
+		F42BA5221C6D2D5700899D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5211C6D2D5700899D7A /* AppDelegate.swift */; };
+		F42BA5241C6D2D5700899D7A /* DeepBlueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5231C6D2D5700899D7A /* DeepBlueController.swift */; };
+		F42BA5271C6D2D5700899D7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42BA5251C6D2D5700899D7A /* Main.storyboard */; };
+		F42BA5291C6D2D5700899D7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42BA5281C6D2D5700899D7A /* Assets.xcassets */; };
+		F42BA52C1C6D2D5700899D7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42BA52A1C6D2D5700899D7A /* LaunchScreen.storyboard */; };
+		F42BA5391C6D2EB900899D7A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5331C6D2EB900899D7A /* HTTPMethod.swift */; };
+		F42BA53A1C6D2EB900899D7A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5341C6D2EB900899D7A /* Result.swift */; };
+		F42BA53B1C6D2EB900899D7A /* TMDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5351C6D2EB900899D7A /* TMDBClient.swift */; };
+		F42BA53D1C6D2EB900899D7A /* TMDBRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5371C6D2EB900899D7A /* TMDBRequest.swift */; };
+		F42BA5421C6D2F5700899D7A /* TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5411C6D2F5700899D7A /* TMDB.swift */; };
+		F42BA5441C6D308900899D7A /* TMDBMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5431C6D308900899D7A /* TMDBMovieRequest.swift */; };
+		F42BA5481C6D310E00899D7A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42BA5471C6D310E00899D7A /* Movie.swift */; };
+		F42C414F1C6D4AF6009C1BBF /* ErrorType+Reportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C414E1C6D4AF6009C1BBF /* ErrorType+Reportable.swift */; };
+		F42C41511C6D4B54009C1BBF /* ErrorType+AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C41501C6D4B54009C1BBF /* ErrorType+AlertPresentable.swift */; };
+		F42C41531C6D4DD7009C1BBF /* TMDBClient+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42C41521C6D4DD7009C1BBF /* TMDBClient+Error.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D0AB63BE29D25C820DB64D6 /* Pods_DeepBlueApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepBlueApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD88E90AD2323BD3809F976 /* Pods-DeepBlueApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepBlueApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeepBlueApp/Pods-DeepBlueApp.release.xcconfig"; sourceTree = "<group>"; };
+		DA6F374C1216B1AD0D46B1D5 /* Pods-DeepBlueApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepBlueApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeepBlueApp/Pods-DeepBlueApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F42BA51E1C6D2D5700899D7A /* DeepBlueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepBlueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42BA5211C6D2D5700899D7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F42BA5231C6D2D5700899D7A /* DeepBlueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBlueController.swift; sourceTree = "<group>"; };
+		F42BA5261C6D2D5700899D7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F42BA5281C6D2D5700899D7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F42BA52B1C6D2D5700899D7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F42BA52D1C6D2D5700899D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42BA5331C6D2EB900899D7A /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F42BA5341C6D2EB900899D7A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F42BA5351C6D2EB900899D7A /* TMDBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBClient.swift; sourceTree = "<group>"; };
+		F42BA5371C6D2EB900899D7A /* TMDBRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBRequest.swift; sourceTree = "<group>"; };
+		F42BA5411C6D2F5700899D7A /* TMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDB.swift; sourceTree = "<group>"; };
+		F42BA5431C6D308900899D7A /* TMDBMovieRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBMovieRequest.swift; sourceTree = "<group>"; };
+		F42BA5471C6D310E00899D7A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F42C414E1C6D4AF6009C1BBF /* ErrorType+Reportable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ErrorType+Reportable.swift"; sourceTree = "<group>"; };
+		F42C41501C6D4B54009C1BBF /* ErrorType+AlertPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ErrorType+AlertPresentable.swift"; sourceTree = "<group>"; };
+		F42C41521C6D4DD7009C1BBF /* TMDBClient+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TMDBClient+Error.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F42BA51B1C6D2D5700899D7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EE482A71DF2ECB08AA61B32 /* Pods_DeepBlueApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37ACCC1D33DA066712714702 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D0AB63BE29D25C820DB64D6 /* Pods_DeepBlueApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBAC0ED105690D8330DFC0A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F374C1216B1AD0D46B1D5 /* Pods-DeepBlueApp.debug.xcconfig */,
+				3FD88E90AD2323BD3809F976 /* Pods-DeepBlueApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F42BA5151C6D2D5700899D7A = {
+			isa = PBXGroup;
+			children = (
+				F42BA5201C6D2D5700899D7A /* DeepBlueApp */,
+				F42BA51F1C6D2D5700899D7A /* Products */,
+				CBAC0ED105690D8330DFC0A8 /* Pods */,
+				37ACCC1D33DA066712714702 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F42BA51F1C6D2D5700899D7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F42BA51E1C6D2D5700899D7A /* DeepBlueApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F42BA5201C6D2D5700899D7A /* DeepBlueApp */ = {
+			isa = PBXGroup;
+			children = (
+				F42BA5211C6D2D5700899D7A /* AppDelegate.swift */,
+				F42BA5231C6D2D5700899D7A /* DeepBlueController.swift */,
+				F42BA5251C6D2D5700899D7A /* Main.storyboard */,
+				F42BA5471C6D310E00899D7A /* Movie.swift */,
+				F42BA53F1C6D2EC300899D7A /* Networking */,
+				F42BA5401C6D2ED800899D7A /* Supporting Files */,
+			);
+			path = DeepBlueApp;
+			sourceTree = "<group>";
+		};
+		F42BA53F1C6D2EC300899D7A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F42BA5411C6D2F5700899D7A /* TMDB.swift */,
+				F42BA5371C6D2EB900899D7A /* TMDBRequest.swift */,
+				F42BA5431C6D308900899D7A /* TMDBMovieRequest.swift */,
+				F42BA5351C6D2EB900899D7A /* TMDBClient.swift */,
+				F42C41521C6D4DD7009C1BBF /* TMDBClient+Error.swift */,
+				F42BA5331C6D2EB900899D7A /* HTTPMethod.swift */,
+				F42BA5341C6D2EB900899D7A /* Result.swift */,
+				F42C41501C6D4B54009C1BBF /* ErrorType+AlertPresentable.swift */,
+				F42C414E1C6D4AF6009C1BBF /* ErrorType+Reportable.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		F42BA5401C6D2ED800899D7A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F42BA5281C6D2D5700899D7A /* Assets.xcassets */,
+				F42BA52A1C6D2D5700899D7A /* LaunchScreen.storyboard */,
+				F42BA52D1C6D2D5700899D7A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F42BA51D1C6D2D5700899D7A /* DeepBlueApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F42BA5301C6D2D5700899D7A /* Build configuration list for PBXNativeTarget "DeepBlueApp" */;
+			buildPhases = (
+				587AF2125347D69DF200D92C /* Check Pods Manifest.lock */,
+				F42BA51A1C6D2D5700899D7A /* Sources */,
+				F42BA51B1C6D2D5700899D7A /* Frameworks */,
+				F42BA51C1C6D2D5700899D7A /* Resources */,
+				214165EE9A5892CC8651D3BB /* Embed Pods Frameworks */,
+				4178659AEB18BE1F069FBECC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepBlueApp;
+			productName = DeepBlueApp;
+			productReference = F42BA51E1C6D2D5700899D7A /* DeepBlueApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F42BA5161C6D2D5700899D7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Tom Piarulli";
+				TargetAttributes = {
+					F42BA51D1C6D2D5700899D7A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F42BA5191C6D2D5700899D7A /* Build configuration list for PBXProject "DeepBlueApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F42BA5151C6D2D5700899D7A;
+			productRefGroup = F42BA51F1C6D2D5700899D7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F42BA51D1C6D2D5700899D7A /* DeepBlueApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F42BA51C1C6D2D5700899D7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42BA52C1C6D2D5700899D7A /* LaunchScreen.storyboard in Resources */,
+				F42BA5291C6D2D5700899D7A /* Assets.xcassets in Resources */,
+				F42BA5271C6D2D5700899D7A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		214165EE9A5892CC8651D3BB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeepBlueApp/Pods-DeepBlueApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4178659AEB18BE1F069FBECC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DeepBlueApp/Pods-DeepBlueApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		587AF2125347D69DF200D92C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F42BA51A1C6D2D5700899D7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42C41531C6D4DD7009C1BBF /* TMDBClient+Error.swift in Sources */,
+				F42BA53B1C6D2EB900899D7A /* TMDBClient.swift in Sources */,
+				F42BA5241C6D2D5700899D7A /* DeepBlueController.swift in Sources */,
+				F42C414F1C6D4AF6009C1BBF /* ErrorType+Reportable.swift in Sources */,
+				F42BA5221C6D2D5700899D7A /* AppDelegate.swift in Sources */,
+				F42BA5421C6D2F5700899D7A /* TMDB.swift in Sources */,
+				F42BA53D1C6D2EB900899D7A /* TMDBRequest.swift in Sources */,
+				F42BA53A1C6D2EB900899D7A /* Result.swift in Sources */,
+				F42BA5391C6D2EB900899D7A /* HTTPMethod.swift in Sources */,
+				F42C41511C6D4B54009C1BBF /* ErrorType+AlertPresentable.swift in Sources */,
+				F42BA5481C6D310E00899D7A /* Movie.swift in Sources */,
+				F42BA5441C6D308900899D7A /* TMDBMovieRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F42BA5251C6D2D5700899D7A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F42BA5261C6D2D5700899D7A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F42BA52A1C6D2D5700899D7A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F42BA52B1C6D2D5700899D7A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F42BA52E1C6D2D5700899D7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F42BA52F1C6D2D5700899D7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F42BA5311C6D2D5700899D7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA6F374C1216B1AD0D46B1D5 /* Pods-DeepBlueApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeepBlueApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tompiarulli.DeepBlueApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F42BA5321C6D2D5700899D7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FD88E90AD2323BD3809F976 /* Pods-DeepBlueApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeepBlueApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tompiarulli.DeepBlueApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F42BA5191C6D2D5700899D7A /* Build configuration list for PBXProject "DeepBlueApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42BA52E1C6D2D5700899D7A /* Debug */,
+				F42BA52F1C6D2D5700899D7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F42BA5301C6D2D5700899D7A /* Build configuration list for PBXNativeTarget "DeepBlueApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F42BA5311C6D2D5700899D7A /* Debug */,
+				F42BA5321C6D2D5700899D7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F42BA5161C6D2D5700899D7A /* Project object */;
+}

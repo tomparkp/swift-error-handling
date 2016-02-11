@@ -1,0 +1,13 @@
+PODS:
+  - Freddy (2.0.2)
+  - Raven (1.0.1)
+
+DEPENDENCIES:
+  - Freddy (~> 2.0)
+  - Raven (~> 1.0)
+
+SPEC CHECKSUMS:
+  Freddy: e53713b8d5be02dbf5f4132c44d899d99eb09a6b
+  Raven: 0c868f0b221c936ae352095d4af3d418e3db1242
+
+COCOAPODS: 0.39.0
