@@ -12,10 +12,10 @@ protocol AlertPresentable {
     var alertContent: (title: String, description: String) { get }
 }
 
-extension AlertPresentable {
-    func presentAlert(context: UIViewController) {
-        let alertController = UIAlertController(title: alertContent.title, message: alertContent.description, preferredStyle: .Alert)
+extension UIViewController {
+    func presentAlertWithError(error: AlertPresentable) {
+        let alertController = UIAlertController(title: error.alertContent.title, message: error.alertContent.description, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        context.presentViewController(alertController, animated: true, completion: nil)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }

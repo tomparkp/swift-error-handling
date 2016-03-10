@@ -42,7 +42,7 @@ class DeepBlueController: UIViewController {
                 case .Failure(let error):
                     print(error)
                     error.report()
-                    error.presentAlert(controller)
+                    controller.presentAlertWithError(error)
                 }
             }
         }
