@@ -20,7 +20,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzd-o2-Mil">
                                 <rect key="frame" x="20" y="497" width="280" height="51"/>
-                                <color key="backgroundColor" red="0.0" green="0.20522422691959519" blue="0.42927921963276838" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.22827192625927878" blue="0.47748940677966101" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="osW-wj-U2k"/>
                                 </constraints>
@@ -39,13 +39,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y61-U4-N6y">
-                                <rect key="frame" x="16" y="124" width="288" height="20.5"/>
+                                <rect key="frame" x="16" y="124" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CLE-d7-aoV">
-                                <rect key="frame" x="142" y="265.5" width="37" height="37"/>
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.2052242269" blue="0.42927921959999998" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -69,6 +69,7 @@
                     <connections>
                         <outlet property="loadingIndicator" destination="CLE-d7-aoV" id="Su9-EL-b1r"/>
                         <outlet property="overviewLabel" destination="y61-U4-N6y" id="dxg-SK-SCH"/>
+                        <outlet property="refreshButton" destination="Zzd-o2-Mil" id="0LG-lH-pmz"/>
                         <outlet property="titleLabel" destination="poe-Dw-PQ0" id="PMu-vO-Iwj"/>
                     </connections>
                 </viewController>

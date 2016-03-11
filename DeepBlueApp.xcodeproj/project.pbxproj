@@ -29,6 +29,7 @@
 		1D0AB63BE29D25C820DB64D6 /* Pods_DeepBlueApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepBlueApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD88E90AD2323BD3809F976 /* Pods-DeepBlueApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepBlueApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeepBlueApp/Pods-DeepBlueApp.release.xcconfig"; sourceTree = "<group>"; };
 		DA6F374C1216B1AD0D46B1D5 /* Pods-DeepBlueApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepBlueApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeepBlueApp/Pods-DeepBlueApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F40CB4A21C9341260015EFE5 /* Errors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Errors.playground; sourceTree = "<group>"; };
 		F42BA51E1C6D2D5700899D7A /* DeepBlueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepBlueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42BA5211C6D2D5700899D7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42BA5231C6D2D5700899D7A /* DeepBlueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBlueController.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 				F42BA5471C6D310E00899D7A /* Movie.swift */,
 				F42BA53F1C6D2EC300899D7A /* Networking */,
 				F42BA5401C6D2ED800899D7A /* Supporting Files */,
+				F40CB4A21C9341260015EFE5 /* Errors.playground */,
 			);
 			path = DeepBlueApp;
 			sourceTree = "<group>";

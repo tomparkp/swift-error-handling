@@ -16,6 +16,7 @@ class DeepBlueController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var refreshButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,12 @@ class DeepBlueController: UIViewController {
             // in the event the user moves away and this VC is deallocated before
             // the request completes and this closure is called.
             if let controller = self {
+
+                // The request tends to finish so quickly you don't see the loading state
+                // so I'm going to wait a second here to make it clearer.
+                sleep(1)
+                // THIS LOCKS UP THE UI - DON'T DO THIS IN A REAL APP!
+
                 controller.toggleLoading(false)
 
                 switch result {
@@ -57,6 +64,9 @@ class DeepBlueController: UIViewController {
         if loading {
             presentEmptyState()
         }
+
+        refreshButton.enabled = !loading
+        refreshButton.alpha = (loading ? 0.5 : 1.0)
 
         loadingIndicator.hidden = !loading
     }
