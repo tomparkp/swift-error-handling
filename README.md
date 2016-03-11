@@ -2,7 +2,7 @@ This project was presented at the March 2016 meeting of [Philly Cocoaheads](http
 
 It's an example API client project that demonstrates how to neatly handle errors through the use of things like enums, generics, protocols, and protocol extensions in Swift. It should be noted that this project is still relatively basic and that in a production project you'll probably want to expand on the boilerplate provided here.
 
-## Kudos:
+## Kudos
 
 * [Yosuke Ishikawa and APIKit](https://github.com/ishkawa/APIKit) - Although this presentation was in the context of organizing and handling errors the networking code is based very heavily on APIKit. After experimenting with many networking libraries I found Yosuke's approach to be a great combination of readability and scalability. If you want to take things a step further, or want to implement a networking approach similar to the one used in this project without writing the boilerplate check out APIKit.
 
