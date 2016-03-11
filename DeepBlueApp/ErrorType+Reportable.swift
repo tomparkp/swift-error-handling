@@ -9,6 +9,27 @@
 import Foundation
 import Raven
 
+/*
+    The Reportable protocol provides a common interface for reporting
+    errors to an error logging service like Sentry - http://getsentry.com
+    
+    Since we're using a protocol it's easy to swap out Sentry for other
+    services. We just change our `report` function.
+
+    This is the magic of protocol extensions - by extending our Reportable
+    protocol we can provide all objects that conform to it with default
+    functionality (that we can also override if neccessary).
+
+    Macros like `__FUNCTION__` provide us with a string version of the
+    current function, etc. so we can include them with our error report.
+*/
+protocol Reportable: ErrorType {
+    var reportDescription: String { get }
+    var reportLevel: ReportLevel { get }
+
+    func report(function: String, file: String, line: Int)
+}
+
 enum ReportLevel {
     case None
     case Debug
@@ -16,12 +37,6 @@ enum ReportLevel {
     case Warning
     case Error
     case Fatal
-}
-
-protocol Reportable {
-    var reportDescription: String { get }
-    var reportLevel: ReportLevel { get }
-    func report(function: String, file: String, line: Int)
 }
 
 extension Reportable {
