@@ -37,7 +37,7 @@ class DeepBlueController: UIViewController {
                 // The request tends to finish so quickly you don't see the loading state
                 // so I'm going to wait a second here to make it clearer.
                 sleep(1)
-                // THIS LOCKS UP THE UI - DON'T DO THIS IN A REAL APP!
+                // ^^^ THIS LOCKS UP THE UI - DON'T DO THIS IN A REAL APP!
 
                 controller.toggleLoading(false)
 
