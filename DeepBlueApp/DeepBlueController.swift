@@ -8,8 +8,10 @@
 
 import UIKit
 
+/// A basic view controller that fetches a single movie from TMDB ()
+/// with a loading indicator and error alerts.
 class DeepBlueController: UIViewController {
-    let tmdbClient = TMDBClient()
+    let APIClient = TMDBClient()
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
@@ -17,35 +19,51 @@ class DeepBlueController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.hidden = true
-        overviewLabel.hidden = true
+        presentEmptyState()
     }
 
     @IBAction func refreshButtonTapped(sender: AnyObject) {
-        titleLabel.hidden = true
-        overviewLabel.hidden = true
-        loadingIndicator.hidden = false
+        toggleLoading(true)
 
         let deepBlueSea = TMDBMovieRequest(id: 8914)
-        tmdbClient.request(deepBlueSea) { [weak self] result in
+        APIClient.request(deepBlueSea) { [weak self] result in
+            
+            // We use [weak self] and unwrap self as "controller" to prevent a crash
+            // in the event the user moves away and this VC is deallocated before
+            // the request completes and this closure is called.
             if let controller = self {
-                controller.loadingIndicator.hidden = true
+                controller.toggleLoading(false)
 
                 switch result {
                 case .Success(let movie):
+                    // Thanks to Generics we get back an already strongly typed object
                     print("Movie loaded successfully: \(movie.title)")
                     controller.titleLabel.text = movie.title
                     controller.overviewLabel.text = movie.overview
-                    controller.overviewLabel.hidden = false
-                    controller.titleLabel.hidden = false
 
                 case .Failure(let error):
+                    // Protocols + Extensions make error handling clean and easy.
                     print(error)
                     error.report()
                     controller.presentAlertWithError(error)
                 }
             }
         }
+    }
+
+    // MARK: - View Helpers
+
+    func toggleLoading(loading: Bool) {
+        if loading {
+            presentEmptyState()
+        }
+
+        loadingIndicator.hidden = !loading
+    }
+
+    func presentEmptyState() {
+        titleLabel.text = ""
+        overviewLabel.text = ""
     }
 }
 
