@@ -28,6 +28,9 @@ struct TMDB {
     By making the backing type of the error an Int we can map
     it directly to error codes from the TMDB API:
     https://www.themoviedb.org/documentation/api/status-codes
+
+    The extension here is just to break things up - you could
+    keep it all in the main definition if you wanted to.
 */
 extension TMDB {
     enum Error: Int, ErrorType {
