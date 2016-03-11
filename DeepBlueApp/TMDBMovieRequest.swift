@@ -55,6 +55,12 @@ struct TMDBMovieRequest: TMDBRequest {
        of the cases you need to. If you miss a case the compiler won't warn you,
        instead it will fall back to the default case which may not be what you
        expect.
+
+    4. Using individual objects for requests lets us use a typealias to specify
+       the type of object we want back from our request. This lets us encapsulate
+       the actual mapping of an API response to a strongly typed object within
+       our API request function, saving us the extra step of mapping it manually
+       for each request.
 */
 
 /*
