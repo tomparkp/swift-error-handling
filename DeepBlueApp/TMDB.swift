@@ -8,11 +8,27 @@
 
 import Foundation
 
+/* 
+    I'm using a TMDB struct with static properties for accessing
+    small shared variables easily i.e. `TMDB.apiKey`.
+*/
 struct TMDB {
     static let baseURLString = "https://api.themoviedb.org/3"
     static let apiKey = "8a4a247d072d9ca4a0072893ab60e277"
 }
 
+/*
+    Swift has pseudo-namespacing by allowing you to embed certain
+    objects within eachother. This provides us with the following
+    syntax: `TMDB.Error.InvalidAPIKey`.
+
+    You don't have to do this. There isn't anything wrong with
+    simply calling it TMDBError and not nesting it.
+
+    By making the backing type of the error an Int we can map
+    it directly to error codes from the TMDB API:
+    https://www.themoviedb.org/documentation/api/status-codes
+*/
 extension TMDB {
     enum Error: Int, ErrorType {
         case InvalidService = 2
