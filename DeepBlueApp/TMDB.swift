@@ -16,35 +16,35 @@ struct TMDB {
 extension TMDB {
     enum Error: Int, ErrorType {
         case InvalidService = 2
-        case InvalidPermissions
-        case InvalidFormat
-        case InvalidParameters
-        case InvalidId
-        case InvalidAPIKey
-        case DuplicateEntry
-        case ServiceOffline
-        case SuspendedAPIKey
-        case InternalError
+        case InvalidPermissions = 3
+        case InvalidFormat = 4
+        case InvalidParameters = 5
+        case InvalidId = 6
+        case InvalidAPIKey = 7
+        case DuplicateEntry = 8
+        case ServiceOffline = 9
+        case SuspendedAPIKey = 10
+        case InternalError = 11
         case AuthenticationFailed = 14
-        case Failed
-        case DeviceDenied
-        case SessionDenied
-        case ValidationFailed
-        case InvalidAcceptHeader
-        case InvalidDateRange
-        case EntryNotFound
-        case InvalidPage
-        case InvalidDate
-        case TimedOut
-        case RequestLimitReached
-        case MissingCredentials
-        case TooManyAppends
-        case InvalidTimezone
-        case ConfirmationRequired
-        case InvalidCredentials
-        case AccountDisabled
-        case EmailNotVerified
-        case InvalidRequestToken
-        case ResourceNotFound
+        case Failed = 15
+        case DeviceDenied = 16
+        case SessionDenied = 17
+        case ValidationFailed = 18
+        case InvalidAcceptHeader = 19
+        case InvalidDateRange = 20
+        case EntryNotFound = 21
+        case InvalidPage = 22
+        case InvalidDate = 23
+        case TimedOut = 24
+        case RequestLimitReached = 25
+        case MissingCredentials = 26
+        case TooManyAppends = 27
+        case InvalidTimezone = 28
+        case ConfirmationRequired = 29
+        case InvalidCredentials = 30
+        case AccountDisabled = 31
+        case EmailNotVerified = 32
+        case InvalidRequestToken = 33
+        case ResourceNotFound = 34
     }
 }
