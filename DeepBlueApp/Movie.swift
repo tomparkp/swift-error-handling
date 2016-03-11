@@ -9,6 +9,16 @@
 import Foundation
 import Freddy
 
+/*
+    All we need to do to make our model objects automagically parsable
+    from the TMDB API is to have them conform to the JSONDecodable
+    protocol.
+
+    Freddy provides us with the JSONDecodable protocol and JSON object
+    for easy JSON parsing, but we could also implement our own
+    JSONDecodable protocol and use it without changing much in the
+    rest of our project (aren't protocols great?).
+*/
 struct Movie: JSONDecodable {
     let title: String
     let overview: String
@@ -18,3 +28,4 @@ struct Movie: JSONDecodable {
         overview = try json.string("overview")
     }
 }
+
