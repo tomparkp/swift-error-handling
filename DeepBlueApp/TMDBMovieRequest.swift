@@ -35,7 +35,25 @@ struct TMDBMovieRequest: TMDBRequest {
     You might be wondering why we don't use an enum for our API requests.
 
     A lot of libraries like Moya and Alamofire recommend an approach like
-    the one below.
+    the one shown below:
+
+    enum TMDBRequest {
+    case Movie(id: Int)
+
+        var path: String {
+            switch self {
+            case .Movie(let id):
+                return "/movie/\(id)"
+            }
+        }
+
+        var method: HTTPMethod {
+            switch self {
+            case .Movie:
+                return .GET
+            }
+        }
+    }
 
     This approach is great and I started with it myself. However there are
     a few issues I encountered with it:
@@ -44,7 +62,7 @@ struct TMDBMovieRequest: TMDBRequest {
        enum declaration - to a point that it becomes unwieldy and difficult
        to maintain.
 
-    2. Due to the nature of enums, in the event of a large API you'd have no
+    2. Due to the nature of enums when dealing with a large API you'd have no
        choice but to break up the functionality in a way that isn't particularly
        intuitive (one file for paths, one file for methods, etc.) I find it
        easier to understand when things are broken up by request.
@@ -63,21 +81,3 @@ struct TMDBMovieRequest: TMDBRequest {
        for each request.
 */
 
-/*
-enum TMDBRequest {
-    case Movie(id: Int)
-
-    var path: String {
-        switch self {
-        case .Movie(let id):
-            return "/movie/\(id)"
-        }
-    }
-
-    var method: HTTPMethod {
-        switch self {
-        case .Movie:
-            return .GET
-        }
-    }
-}*/

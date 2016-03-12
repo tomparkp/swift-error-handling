@@ -9,6 +9,12 @@
 import Foundation
 import Freddy
 
+/*
+    Since enums can have associated values in Swift, we can build
+    a hierarchy of errors. For example - the JSONMappingFailed error
+    includes a JSON.Error that can give us a more specific error
+    regarding what key failed.
+*/
 extension TMDBClient {
     enum Error: ErrorType {
         case ConnectionError(NSError)
@@ -22,6 +28,11 @@ extension TMDBClient {
     }
 }
 
+/*
+    Conforming to CustomStringConvertible lets us easily print errors to
+    the console. I recommend using a logging framework like XCGLogger
+    or SwiftyBeaver in a production app.
+*/
 extension TMDBClient.Error: CustomStringConvertible {
     var description: String {
         switch self {
@@ -45,6 +56,14 @@ extension TMDBClient.Error: CustomStringConvertible {
     }
 }
 
+/*
+    One of the great things about enums and protocol extensions is you can easily
+    organize your error handling by how it impacts the user.
+
+    In this case if there is a connection issue we ask the user to check their
+    connection. If it's any other TMDBClient Error (all things out of the user's
+    control) we display a message saying something went wrong on our end.
+*/
 extension TMDBClient.Error: AlertPresentable {
     var alertContent: (title: String, description: String) {
         var title: String
@@ -63,6 +82,13 @@ extension TMDBClient.Error: AlertPresentable {
     }
 }
 
+/*
+    Conforming to the Reportable protocol is as simple as providing a description
+    and a log level, everything else is contained within the protocol extension.
+
+    By conforming to Reportable we can report errors to Sentry with one line:
+    error.report()
+*/
 extension TMDBClient.Error: Reportable {
     var reportDescription: String {
         return description

@@ -18,8 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    /// A function to setup Raven (Sentry's iOS SDK) for error reporting. 
-    /// http://getsentry.com
+    /// A function to setup Raven (Sentry's iOS SDK) for error reporting. http://getsentry.com
     func setupRaven() {
         let ravenClient = RavenClient(DSN: "https://4954fcf42a03498d8ec0ad4a8df6019a:a03c97140d2c493a8e3148d4fb2f2d40@app.getsentry.com/66874")
         RavenClient.setSharedClient(ravenClient)
