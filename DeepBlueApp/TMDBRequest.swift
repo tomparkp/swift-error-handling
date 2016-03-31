@@ -10,9 +10,9 @@ import Foundation
 import Freddy
 
 protocol TMDBRequest {
-    // This typealias allows use to provide a type to use when mapping
+    // This allows us to provide a type to use when mapping
     // the JSON to a strongly typed object.
-    typealias Response: JSONDecodable
+    associatedtype Response: JSONDecodable
 
     var method: HTTPMethod { get }
     var path: String { get }

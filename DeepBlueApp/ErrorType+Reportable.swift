@@ -40,7 +40,7 @@ enum ReportLevel {
 }
 
 extension Reportable {
-    func report(function: String = __FUNCTION__, file: String = __FILE__, line: Int = __LINE__) {
+    func report(function: String = #function, file: String = #file, line: Int = #line) {
         let sentry = RavenClient.sharedClient()
         var logLevel: RavenLogLevel
 
